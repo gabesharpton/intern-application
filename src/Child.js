@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 function Child(props) {
-  const [color, setColor] = useState(props);
+  const [color, setColor] = useState(props.color);
 
   function changeColor() {
-    setColor(`${props.color}`);
+    setColor(`${color}`);
   }
 
   return (
-    <div className="full" style={{ "background-color": `${props.color}` }}>
+    <div className="full" style={{ "background-color": `${color}` }}>
       <div className="hw" style={{ color: `black` }} onClick={changeColor}>
         Hello World
       </div>

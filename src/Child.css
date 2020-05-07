@@ -1,3 +1,20 @@
+body{
+    background-color: mintcream;
+}
 div {
     color: black
+}
+.full {
+    margin: auto 0;
+    height: 50vw;
+
+}
+.hw {
+    height: 10%;
+    width: 20%;
+    color: black
+}
+.blink {
+    text-align: center;
+    font-size: 4em;
 }

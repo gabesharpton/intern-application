@@ -1,33 +1,29 @@
 import React, { useState } from "react";
-import  './Child.css'
+import "./Child.css";
 
 function Child(props) {
-  const [color, setColor] = useState(props.color);
+  const [color, setColor] = useState(props);
 
   function changeColor() {
-    setColor(color);
+    setColor(`${props.color}`);
   }
 
   return (
     <div className="full" style={{ "background-color": `${color}` }}>
-      <button className="hw"  onClick={changeColor}>
-        Hello World
-      </button>
+      <h1 className="hw" onClick={changeColor}>
+        Hello World, CLICK ME
+      </h1>
 
-      
-        <h2 className="blink" >
-          
-          Blink {props.blink ? 
-
-          (<span style={{color: 'blue'}}>TRUE</span>) : 
-          
-          (<span style={{color: 'red'}}>FALSE</span>)}
-
-         </h2>
-      
+      <h2 className="blink">
+        Blink{" "}
+        {props.blink ? (
+          <span style={{ color: "blue" }}>TRUE</span>
+        ) : (
+          <span style={{ color: "red" }}>FALSE</span>
+        )}
+      </h2>
     </div>
   );
 }
 
-console.log(Child);
 export default Child;

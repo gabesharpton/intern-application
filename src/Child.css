@@ -10,8 +10,8 @@ div {
 
 }
 .hw {
-    height: 10%;
-    width: 20%;
+    font-size: 3rem;
+    text-align: center;
     color: black
 }
 .blink {
